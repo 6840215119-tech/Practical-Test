@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าเว็บของฉัน</title>
+    <style>
+        /* CSS สำหรับตกแต่งเบื้องต้น */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        ul {
+            text-align: left;
+            display: inline-block;
+        }
+        .interactive-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Playboi Carti</h1>
+
+    <img src="blob:https://github.com/947a60c7-667a-43b2-bc55-3c5a27d38ed5" alt="รูปภาพประกอบเว็บ">
+
+    <p>นี่คือเว็บไซต์ที่ขึ้นเพื่ออธิบายเกี่ยวกับ playboi carti
+    Playboi Carti คือแร็ปเปอร์ผู้ปฏิวัติวงการด้วยสไตล์ "Baby Voice" และแนวดนตรีแบบ Rage ที่ผสมผสานพลังงานพังก์ร็อกเข้ากับแฟชั่นสายดาร์ก จนกลายเป็นไอคอนผู้ทรงอิทธิพลและหัวเรือใหญ่แห่งค่าย Opium ที่วัยรุ่นทั่วโลกยกให้เป็นลัทธิแห่งยุคสมัยครับ</p>
+
+    <h3>Album:</h3>
+    <ul>
+        <li>"Magnolia" (2017)</li>
+        <li>"Whole Lotta Red" (2020)</li>
+        <li>"Music" (2025)</li>
+    </ul>
+
+    <br>
+    <p>เรียนรู้เพิ่มเติมได้ที่: <a href="https://open.spotify.com/artist/699OTQXzgjhIYAHMy9RyPD" target="_blank">ไปที่ Spotify</a></p>
+
+    <div class="interactive-section">
+        <h3>ทักทายกันหน่อย</h3>
+        <input type="text" id="nameInput" placeholder="กรอกชื่อของคุณที่นี่">
+        <button onclick="greetUser()">กดปุ่มทักทาย</button>
+        <p id="greetingMessage" style="font-weight: bold; color: #28a745; margin-top: 15px;"></p>
+    </div>
+</div>
+
+<script>
+    window.onload = function() {
+        console.log("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
+    };
+    function greetUser() {
+        const name = document.getElementById('nameInput').value;
+        const messageElement = document.getElementById('greetingMessage');
+        
+        if (name.trim() !== "") {
+            messageElement.innerText = "สวัสดี " + name + " ยินดีต้อนรับ!";
+        } else {
+            messageElement.innerText = "กรุณากรอกชื่อก่อนกดปุ่มนะครับ";
+            messageElement.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
